@@ -1,0 +1,12 @@
+{
+  "name": "Telegram Weather Bot Dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "telegram_weather_bot",
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose",
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance"
+  ],
+  "postCreateCommand": "pip install -r requirements.txt"
+}

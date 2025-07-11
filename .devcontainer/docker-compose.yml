@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  telegram_weather_bot:
+    build:
+      context: ..                      # Volta um nível para pegar os arquivos do projeto
+      dockerfile: .devcontainer/Dockerfile
+    container_name: telegram_weather_bot
+    env_file:
+      - ../.env                        # Volta um nível para encontrar o .env
+    volumes:
+      - ..:/app                        # Monta toda a raiz do projeto como volume
+    # restart: unless-stopped
